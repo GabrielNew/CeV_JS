@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Variáveis</title>
+
+    <style>
+      body {
+        background-color: rgba(105, 105, 173);
+        color: white;
+        font: normal 20pt Arial;
+      }
+
+      h1 {
+        color: rgb(255, 212, 22);
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+      var num1 = parseInt(window.prompt('Digite um número: '));
+      var num2 = parseInt(window.prompt('Digite outro número: '));
+      /*
+      var num2 = Number(window.prompt('Digite outro número: '))
+      O 'Number' irá converter para float ou int, depende da entrada do usuário.
+      Caso seja necessário forçar o número a ser int ou float, usamos o parseInt
+      ou o parseFloat.
+
+      Para converter um número para string utilizamos o String(num) ou o
+      num.toString()
+      */
+      var s = num1 + num2;
+      window.alert('A soma vale: ' + s);
+      window.alert(`${num1} + ${num2} = ${s}`); // Com Template String
+    </script>
+  </body>
+</html>
