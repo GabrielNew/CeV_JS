@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Iniciando o DOM</title>
+    <style>
+      body {
+        background: rgb(68, 125, 199);
+        color: white;
+        font: normal 18pt Arial;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Inicio dos estudos em DOM</h1>
+    <p>Aprendendo a usar o DOM em Javascript.</p>
+    <p>Escrevendo em um outro parágrafo</p>
+    <div name="teste">click</div>
+    <script>
+      var corpo = window.document.body
+      var p1 = window.document.getElementsByTagName('p')[0]
+      /*
+      var d = window.document.getElementById('teste')
+      d.style.background = 'green'
+      d.innerText = 'TESTANDO'
+      */
+      var d = window.document.getElementsByName('teste')[0]
+      d.innerText = 'Oi!'
+    </script>
+  </body>
+</html>
