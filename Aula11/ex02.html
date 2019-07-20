@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Brasileiro?</title>
+</head>
+<body>
+    <h1>Você é brasileiro?</h1>
+    Onde você nasceu? <input type="text" id="nas">
+    <input type="button" value="Verifica" onclick="verifica()">
+
+    <div id="res"></div>
+
+    <script>
+        function verifica() {
+            var txt = document.getElementById('nas').value.toUpperCase()
+            var res = document.getElementById('res')
+
+            res.innerHTML = `Nasceu no(a): ${txt}`
+            if (txt == "BRASIL") {
+                res.innerHTML += `, então é brasileiro`
+            } else {
+                res.innerHTML += `, então não é brasileiro`
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistemas de Multas</h1>
+    Velocidade do Carro: <input type="number" id="vel"> KM/H
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var strvel = document.getElementById('vel')
+            var vel = Number(strvel.value)
+            var res = document.getElementById('res')
+            res.innerHTML = `Sua velocidade atual é de ${vel}km/h`
+
+            if (vel > 60) {
+                res.innerHTML += `<p>Você ultrapassou o limite de velocidade, por isso recebeu uma multa</p>`
+            }
+        }
+    
+    </script>
+</body>
+</html>
